@@ -1,6 +1,5 @@
 from mongoengine import *
 from flask import Flask, request, redirect, url_for, render_template, jsonify, Response
-#from flask import (Flask, request, jsonify)
 
 app = Flask(__name__)
 
@@ -10,13 +9,11 @@ class Image(DynamicDocument):
     token = StringField()
     content = StringField()
 
-#Carrega index.html
 @app.route('/')
 def index():
     return render_template('index.html')
 
-
-''' Salva a imagem no mongodb '''
+''' Salva a imagem na db '''
 @app.route('/save', methods=['POST', 'GET'])
 def save():
     if request.method=='POST':
@@ -54,11 +51,6 @@ def all():
     return jsonify(content)
 
 
-@app.route('/_add_numbers/')
-def add_numbers():
-    a = request.args.get('a', 0, type=int)
-    b = request.args.get('b', 0, type=int)
-    return jsonify(result=a + b)
-
 if __name__ == '__main__':
     app.run(debug=True)
+
