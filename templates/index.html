@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <title>Sh4r3</title>
+    <link rel="stylesheet" href="http://jsuol.com/c/_template/v1/web/css/reset.css" type="text/css" media="screen" charset="utf-8">
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css') }}" type="text/css" media="screen" charset="utf-8">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+    <section id="wrapper">
+
+        <!-- Drag n drop zone  -->
+        <div id="dropZone">
+            <span id="dropHere">Drop here</span>
+        </div>
+
+        <!-- Messages / file info -->
+        <p id="byteRange" class="hide"></p>
+        <p id="messageError" class="hide">File type not allowed.</p>
+        <p id="messageOk" class="hide">Converted successfully.</p>
+
+        <div id="image"></div>
+
+    </div>
+
+    <script type="text/javascript" src="http://jsuol.com/c/jquery/jquery.js"></script>
+    <script type="text/javascript" src="{{url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html> 
+
