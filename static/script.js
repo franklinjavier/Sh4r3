@@ -41,11 +41,8 @@ Sh4r3 = (function( window, $ ) {
 
             // Drop a file with an extension not allowed
             if ( !allow.extension.test( extension ) ) {
-
                 App.notAllowed('File not allowed');
-
                 return false;
-
             }
 
             // File is to big
