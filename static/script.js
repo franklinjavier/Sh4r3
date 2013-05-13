@@ -1,6 +1,6 @@
-var Sh4r3 = Sh4r3 || {};
+var Sh4r3 = Sh4r3 || function(){};
 
-Sh4r3 = (function( window, $ ) {
+var Sh4r3 = (function( window, $ ) {
 
     var dropZone = document.getElementById('dropZone');
     var dropHere = document.getElementById('dropHere');
